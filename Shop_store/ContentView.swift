@@ -13,6 +13,7 @@ struct ContentView: View {
         case  home_view
     }//設定每個分支畫面的函數
     @StateObject var MyData = ShopMenu()//Shop的Model
+    @StateObject var AgeViews = VGinform()
     @State var selectionId = selectionName.shopping_cart
     @State var numbers = "home"//進去的第一個畫面
     
@@ -23,6 +24,7 @@ struct ContentView: View {
                     .tabItem { Image(systemName:"cart.fill.badge.plus") }
                     .tag(selectionName.shopping_cart)
                 Home_View().environmentObject(MyData)
+                    .environmentObject(AgeViews)
                     .tabItem { Image(systemName:"house.fill") }
                     .tag(selectionName.home_view)
           }

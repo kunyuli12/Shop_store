@@ -10,6 +10,7 @@ import SwiftUI
 struct Home_View: View {
     
     @EnvironmentObject var MyData:ShopMenu
+    @EnvironmentObject var AgeViews:VGinform
     @ObservedObject var MyDates = ShopMenu()
     
     var body: some View {
@@ -30,9 +31,9 @@ struct Home_View: View {
                     }
                     Spacer()
                     NavigationLink{
-                        LikeList()
+                        Health_Guidelines_View()
                     } label:{
-                        enterbuttom(entertext:"我的最愛")
+                        enterbuttom(entertext:"蔬果量指引")
                     }
                     Spacer()
                 }
@@ -62,6 +63,7 @@ struct Home_View: View {
 struct Home_View_Previews: PreviewProvider {
     static var previews: some View {
         Home_View().environmentObject(ShopMenu())
+            .environmentObject(VGinform())
     }
 }
 

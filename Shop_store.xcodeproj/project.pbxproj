@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		2123DA0C582B6602D759848C /* Pods_Shop_store.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C20217F0625480DEAC270706 /* Pods_Shop_store.framework */; };
+		69082BE4298E2F7F00E3DDB3 /* AgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69082BE3298E2F7F00E3DDB3 /* AgeView.swift */; };
+		690A03EC298D439C00B6954D /* Health_Guidelines_View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690A03EB298D439C00B6954D /* Health_Guidelines_View.swift */; };
+		690A03EE298D43BD00B6954D /* Health_Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690A03ED298D43BD00B6954D /* Health_Model.swift */; };
 		692CECA829879F3100BCC720 /* Home_View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 692CECA729879F3100BCC720 /* Home_View.swift */; };
 		6939D14F29750F2B0080B5FF /* Shop_storeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6939D14E29750F2B0080B5FF /* Shop_storeApp.swift */; };
 		6939D15129750F2B0080B5FF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6939D15029750F2B0080B5FF /* ContentView.swift */; };
@@ -26,6 +29,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		69082BE3298E2F7F00E3DDB3 /* AgeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgeView.swift; sourceTree = "<group>"; };
+		690A03EB298D439C00B6954D /* Health_Guidelines_View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Health_Guidelines_View.swift; sourceTree = "<group>"; };
+		690A03ED298D43BD00B6954D /* Health_Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Health_Model.swift; sourceTree = "<group>"; };
 		692CECA729879F3100BCC720 /* Home_View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home_View.swift; sourceTree = "<group>"; };
 		6939D14B29750F2B0080B5FF /* Shop_store.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Shop_store.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6939D14E29750F2B0080B5FF /* Shop_storeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shop_storeApp.swift; sourceTree = "<group>"; };
@@ -59,6 +65,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		690A03E8298D435300B6954D /* Health_Group */ = {
+			isa = PBXGroup;
+			children = (
+				690A03EB298D439C00B6954D /* Health_Guidelines_View.swift */,
+			);
+			path = Health_Group;
+			sourceTree = "<group>";
+		};
 		6939D14229750F2B0080B5FF = {
 			isa = PBXGroup;
 			children = (
@@ -111,6 +125,7 @@
 				6955FE6A29817028002E8556 /* Cartview.swift */,
 				69FBF2882987A5EA008FBCEE /* Account.swift */,
 				69FBF28A2987A611008FBCEE /* LikeList.swift */,
+				690A03E8298D435300B6954D /* Health_Group */,
 			);
 			path = HOME;
 			sourceTree = "<group>";
@@ -119,6 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				698C280C298A970E004D9709 /* ShopModel.swift */,
+				690A03ED298D43BD00B6954D /* Health_Model.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -127,6 +143,7 @@
 			isa = PBXGroup;
 			children = (
 				6955FE7029817ADE002E8556 /* buybuttom.swift */,
+				69082BE3298E2F7F00E3DDB3 /* AgeView.swift */,
 			);
 			path = Other_view;
 			sourceTree = "<group>";
@@ -265,13 +282,16 @@
 			files = (
 				69FBF2892987A5EA008FBCEE /* Account.swift in Sources */,
 				696851C0298794A6001EB4BC /* Product_List.swift in Sources */,
+				690A03EC298D439C00B6954D /* Health_Guidelines_View.swift in Sources */,
 				6955FE7129817ADE002E8556 /* buybuttom.swift in Sources */,
 				69FBF28B2987A611008FBCEE /* LikeList.swift in Sources */,
+				690A03EE298D43BD00B6954D /* Health_Model.swift in Sources */,
 				692CECA829879F3100BCC720 /* Home_View.swift in Sources */,
 				698C280D298A970E004D9709 /* ShopModel.swift in Sources */,
 				6939D15129750F2B0080B5FF /* ContentView.swift in Sources */,
 				6939D14F29750F2B0080B5FF /* Shop_storeApp.swift in Sources */,
 				6955FE6B29817028002E8556 /* Cartview.swift in Sources */,
+				69082BE4298E2F7F00E3DDB3 /* AgeView.swift in Sources */,
 				6955FE6F29817091002E8556 /* ProductView.swift in Sources */,
 				696851C32987976F001EB4BC /* Shop_View.swift in Sources */,
 				6955FE6929817017002E8556 /* PurchaseHistory.swift in Sources */,
