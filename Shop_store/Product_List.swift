@@ -19,22 +19,6 @@ struct Product_List: View {
     var body: some View {
         NavigationView{
         VStack{
-            HStack {
-                TextField("搜尋...",text: $textview)
-                    .padding(8)
-                    .textFieldStyle(.roundedBorder)
-                Button{
-                    
-                } label: {
-                    Image(systemName: "paperplane.fill")
-                        .resizable()
-                        .frame(width: 35, height: 35, alignment: .center)
-                        .padding(9)
-                        .background(Color(.green))
-                        .cornerRadius(15)
-                        .padding(.trailing,5)
-                }
-            }
             ScrollView(showsIndicators:false) {
                 ForEach(MyData.Buying){ mu in //mu 是每次回圈時所帶的值
                     NavigationLink{
@@ -76,6 +60,7 @@ struct Product_List: View {
                                 .frame(width: 100, height: 50)
                                 .cornerRadius(10)
                                 .background(Color(.gray))
+                                .foregroundColor(.white)
                                 .cornerRadius(5)
                                 .onTapGesture {
                                     if numbernew > 0 {
@@ -96,7 +81,7 @@ struct Product_List: View {
                                         .font(.system(size: 35, weight: .heavy, design: .rounded))
                                         .foregroundColor(.white)
                                         .frame(width: 100, height: 50)
-                                        .background(Color(.red))
+                                        .background(LinearGradient(gradient: Gradient(colors: [Color("Darked"), Color.red]), startPoint:.topLeading, endPoint:.bottomTrailing))
                                         .cornerRadius(10)
                                         .onTapGesture {
                                             chock.toggle()
@@ -106,7 +91,7 @@ struct Product_List: View {
                                         .font(.system(size: 35, weight: .heavy, design: .rounded))
                                         .foregroundColor(.white)
                                         .frame(width: 100, height: 50)
-                                        .background(Color(.red))
+                                        .background(LinearGradient(gradient: Gradient(colors: [Color("Darked"), Color.red]), startPoint:.topLeading, endPoint:.bottomTrailing))
                                         .cornerRadius(10)
                                         .onTapGesture {
                                             MyData.addOrder(value: mu, quanty: numbernew)
@@ -116,7 +101,7 @@ struct Product_List: View {
                                 }
                                 Spacer()
                             }.frame(width: 340, height: 200)
-                                .background(Color(.gray))
+                                .background(LinearGradient(gradient: Gradient(colors: [Color.gray, Color("DarkGary")]), startPoint:.topLeading, endPoint:.bottomTrailing))
                                 .cornerRadius(20)
                                 .offset(x:chock ? 0:1000)
                             VStack{
@@ -130,14 +115,14 @@ struct Product_List: View {
                                         .font(.system(size: 35, weight: .heavy, design: .rounded))
                                         .foregroundColor(.white)
                                         .frame(width: 100, height: 50)
-                                        .background(Color(.red))
+                                        .background(LinearGradient(gradient: Gradient(colors: [Color("Darked"), Color.red]), startPoint:.topLeading, endPoint:.bottomTrailing))
                                         .cornerRadius(10)
                                         .onTapGesture {
                                             chock_again.toggle()
                                 }
                                 Spacer()
                             }.frame(width: 340, height: 200)
-                                .background(Color(.gray))
+                                .background(LinearGradient(gradient: Gradient(colors: [Color.gray, Color("DarkGary")]), startPoint:.topLeading, endPoint:.bottomTrailing))
                                 .cornerRadius(20)
                                 .offset(x:chock_again ? 0:1000)
                         }

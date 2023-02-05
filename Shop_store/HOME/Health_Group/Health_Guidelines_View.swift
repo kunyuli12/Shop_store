@@ -26,6 +26,9 @@ struct Health_Guidelines_View: View {
             Text("家庭人數計算")
                 .font(.largeTitle)
                 .padding(.vertical,20)
+            Rectangle()
+                .frame(maxWidth:.infinity)
+                .frame(height:1.5)
             TabView{
                 boyview()
                 girlview()
@@ -35,14 +38,12 @@ struct Health_Guidelines_View: View {
                 Text("水果需要\(String(format: "%.0f",anserFU))份")
                     .font(.title)
             Spacer()
-        }.frame(width: 320, height: 650)
-            .background(Color("確定Color"))
-            .cornerRadius(15)
+        }
     }
     @ViewBuilder func boyview() -> some View{
         HStack {
             VStack(alignment: .leading,spacing: 20){
-                Text("MAN")//標題
+                Text("男生")//標題
                     .font(.system(size: 30, weight: .heavy, design: .rounded))
                 ForEach(AgeViews.AGEbox_B){ ags in //迴圈帶入每個年齡層的資訊
                     VStack(alignment: .leading,spacing: 15){
@@ -89,15 +90,19 @@ struct Health_Guidelines_View: View {
                         }
                     }
                 }
-                Spacer().frame(width:200)
+               Spacer().frame(width:200)
             }
-            Spacer()
-        }.frame(width: 280, height: 450)
+            //Spacer()
+        }
+        .frame(width: 300, height: 450)
+        .padding()
+        .background(Color("確定Color"))
+        .cornerRadius(15)
     }
     @ViewBuilder func girlview() -> some View{
         HStack {
             VStack(alignment: .leading,spacing: 20){
-                Text("WOMAN")
+                Text("女生")
                     .font(.system(size: 30, weight: .heavy, design: .rounded))
                 ForEach(AgeViews.AGEbox_G){ ags in
                     VStack(alignment: .leading,spacing: 15){
@@ -148,7 +153,11 @@ struct Health_Guidelines_View: View {
                 Spacer().frame(width:200)
             }
             Spacer()
-        }.frame(width: 280, height: 450)
+        }
+        .frame(width: 300, height: 450)
+        .padding()
+        .background(Color("確定Color"))
+        .cornerRadius(15)
     }
 }
 

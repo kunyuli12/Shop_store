@@ -10,8 +10,20 @@ import SwiftUI
 struct Shop_View: View {
 
     var body: some View {
-       Text("New world")
-            .font(.largeTitle)
+        VStack{
+        Text("Test View")
+            .foregroundColor(.white)
+            .font(.title2)
+            .frame(width: 180, height: 180, alignment: .center)
+            .background(LinearGradient(gradient: Gradient(colors: [Color("healthybuttom"), Color("yellowlight")]), startPoint:.topLeading, endPoint:.bottomTrailing))
+            .cornerRadius(20)
+            Text("Test View")
+                .foregroundColor(.white)
+                .font(.title2)
+                .frame(width: 180, height: 180, alignment: .center)
+                .background(Color(.gray))
+                .cornerRadius(20)
+        }
     }
 }
 

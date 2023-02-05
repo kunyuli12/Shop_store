@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import FirebaseFirestoreSwift
 
 struct Cartview: View {
     
@@ -13,6 +14,7 @@ struct Cartview: View {
     @ObservedObject var Mydata = ShopMenu()
     @State var anser:Int = 0
     @State var showView:Bool = false
+    @State var showNote:Bool = false
     
     var body: some View {
         ZStack {
@@ -60,7 +62,7 @@ struct Cartview: View {
                             .foregroundColor(.gray)
                             .cornerRadius(5)
                             .onTapGesture {
-                                mydata.lowerOrder(value: od.Menu)
+                                mydata.lowerOrder(value: od.Menu,quanty: 1)
                                 anser = mydata.sumPrise(temp_orders: mydata.ShowOrder)
                             }
                         Image(systemName: "plus.square.fill")
@@ -82,23 +84,41 @@ struct Cartview: View {
     @ViewBuilder func PriseView() -> some View{
         HStack {
             VStack{
-                Text("總共：  \(anser)")
+                Text("總共：")
+                    .font(.title2)
+                Text("\(anser)")
                     .font(.title2)
             }.padding(.leading,10)
             Spacer()
-            Text("prise")
+            Text("筆記")
                 .font(.title)
-                .frame(width: 85, height: 85)
-                .background(Color(.gray))
-                .cornerRadius(5)
+                .frame(width: 75, height: 75)
+                .background(LinearGradient(gradient: Gradient(colors: [Color.gray, Color("DarkGary")]), startPoint:.topLeading, endPoint:.bottomTrailing))
+                .foregroundColor(.white)
+                .cornerRadius(10)
+                .onTapGesture {
+                    showNote.toggle()
+                }
+                .blur(radius: showNote ? 9 : 0)
+            
+                .sheet(isPresented: $showNote){
+                        NoteView()
+                }
+            Text("金額")
+                .font(.title)
+                .frame(width: 75, height: 75)
+                .background(LinearGradient(gradient: Gradient(colors: [Color.gray, Color("DarkGary")]), startPoint:.topLeading, endPoint:.bottomTrailing))
+                .foregroundColor(.white)
+                .cornerRadius(10)
                 .onTapGesture {
                     anser = mydata.sumPrise(temp_orders: mydata.ShowOrder)
                 }
             Text("購買")
                 .font(.title)
-                .frame(width: 85, height: 85)
-                .background(Color(.gray))
-                .cornerRadius(5)
+                .frame(width: 75, height: 75)
+                .background(LinearGradient(gradient: Gradient(colors: [Color.gray, Color("DarkGary")]), startPoint:.topLeading, endPoint:.bottomTrailing))
+                .foregroundColor(.white)
+                .cornerRadius(10)
                 .padding(.trailing,10)
                 .onTapGesture {
                     showView.toggle()
@@ -116,7 +136,7 @@ struct Cartview: View {
                 Text("取消")
                     .font(.system(size: 35, weight: .heavy, design: .rounded))
                     .frame(width: 90, height: 50)
-                    .background(Color(.red))
+                    .background(LinearGradient(gradient: Gradient(colors: [Color("Darked"), Color.red]), startPoint:.topLeading, endPoint:.bottomTrailing))
                     .cornerRadius(10)
                     .foregroundColor(.white)
                     .onTapGesture {
@@ -132,13 +152,13 @@ struct Cartview: View {
                         anser = 0
                     }
                     .frame(width: 90, height: 50)
-                    .background(Color(.red))
+                    .background(LinearGradient(gradient: Gradient(colors: [Color("Darked"), Color.red]), startPoint:.topLeading, endPoint:.bottomTrailing))
                     .cornerRadius(10)
                
             }
             Spacer()
         }.frame(width: 340, height: 200)
-            .background(Color(.gray))
+            .background(LinearGradient(gradient: Gradient(colors: [Color.gray, Color("DarkGary")]), startPoint:.topLeading, endPoint:.bottomTrailing))
             .cornerRadius(20)
     }
 }

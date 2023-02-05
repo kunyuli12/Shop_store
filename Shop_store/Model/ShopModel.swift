@@ -63,7 +63,7 @@ class ShopMenu:ObservableObject{
             ShowOrder.append(Order(Menu: value, numbers: quanty))
         }
     }
-    func lowerOrder(value:Menu){//減少商品數量
+    func lowerOrder(value:Menu,quanty:Int){//減少商品數量
         let Index = ShowOrder.firstIndex(where: {od in
             od.Menu.productname == value.productname
         })
@@ -74,7 +74,7 @@ class ShopMenu:ObservableObject{
                 ShowOrder.removeAll()
             }
         }else{
-            ShowOrder.append(Order(Menu: value, numbers: 1))
+            ShowOrder.append(Order(Menu: value, numbers: quanty))
         }
     }
     func toltolprise(priese:Int,number:Int) -> Int {//計算單一筆的價錢
@@ -101,3 +101,5 @@ class Cacus:ObservableObject{
         return anser
     }
 }
+
+

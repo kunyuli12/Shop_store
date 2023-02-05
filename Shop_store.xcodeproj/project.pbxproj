@@ -23,7 +23,9 @@
 		6955FE7529817E0D002E8556 /* GoogleService-Info-2.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6955FE7429817E0D002E8556 /* GoogleService-Info-2.plist */; };
 		696851C0298794A6001EB4BC /* Product_List.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696851BF298794A6001EB4BC /* Product_List.swift */; };
 		696851C32987976F001EB4BC /* Shop_View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696851C22987976F001EB4BC /* Shop_View.swift */; };
+		69732416298E406500F1D74B /* DatabaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69732415298E406500F1D74B /* DatabaseModel.swift */; };
 		698C280D298A970E004D9709 /* ShopModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 698C280C298A970E004D9709 /* ShopModel.swift */; };
+		6996C918298F53D7007F0769 /* NoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6996C917298F53D7007F0769 /* NoteView.swift */; };
 		69FBF2892987A5EA008FBCEE /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69FBF2882987A5EA008FBCEE /* Account.swift */; };
 		69FBF28B2987A611008FBCEE /* LikeList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69FBF28A2987A611008FBCEE /* LikeList.swift */; };
 /* End PBXBuildFile section */
@@ -45,7 +47,9 @@
 		6955FE7429817E0D002E8556 /* GoogleService-Info-2.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info-2.plist"; sourceTree = "<group>"; };
 		696851BF298794A6001EB4BC /* Product_List.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product_List.swift; sourceTree = "<group>"; };
 		696851C22987976F001EB4BC /* Shop_View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shop_View.swift; sourceTree = "<group>"; };
+		69732415298E406500F1D74B /* DatabaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseModel.swift; sourceTree = "<group>"; };
 		698C280C298A970E004D9709 /* ShopModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopModel.swift; sourceTree = "<group>"; };
+		6996C917298F53D7007F0769 /* NoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteView.swift; sourceTree = "<group>"; };
 		69FBF2882987A5EA008FBCEE /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
 		69FBF28A2987A611008FBCEE /* LikeList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeList.swift; sourceTree = "<group>"; };
 		7843D59C7C95F129B209DF16 /* Pods-Shop_store.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shop_store.release.xcconfig"; path = "Target Support Files/Pods-Shop_store/Pods-Shop_store.release.xcconfig"; sourceTree = "<group>"; };
@@ -135,6 +139,7 @@
 			children = (
 				698C280C298A970E004D9709 /* ShopModel.swift */,
 				690A03ED298D43BD00B6954D /* Health_Model.swift */,
+				69732415298E406500F1D74B /* DatabaseModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -144,6 +149,7 @@
 			children = (
 				6955FE7029817ADE002E8556 /* buybuttom.swift */,
 				69082BE3298E2F7F00E3DDB3 /* AgeView.swift */,
+				6996C917298F53D7007F0769 /* NoteView.swift */,
 			);
 			path = Other_view;
 			sourceTree = "<group>";
@@ -284,6 +290,7 @@
 				696851C0298794A6001EB4BC /* Product_List.swift in Sources */,
 				690A03EC298D439C00B6954D /* Health_Guidelines_View.swift in Sources */,
 				6955FE7129817ADE002E8556 /* buybuttom.swift in Sources */,
+				69732416298E406500F1D74B /* DatabaseModel.swift in Sources */,
 				69FBF28B2987A611008FBCEE /* LikeList.swift in Sources */,
 				690A03EE298D43BD00B6954D /* Health_Model.swift in Sources */,
 				692CECA829879F3100BCC720 /* Home_View.swift in Sources */,
@@ -291,6 +298,7 @@
 				6939D15129750F2B0080B5FF /* ContentView.swift in Sources */,
 				6939D14F29750F2B0080B5FF /* Shop_storeApp.swift in Sources */,
 				6955FE6B29817028002E8556 /* Cartview.swift in Sources */,
+				6996C918298F53D7007F0769 /* NoteView.swift in Sources */,
 				69082BE4298E2F7F00E3DDB3 /* AgeView.swift in Sources */,
 				6955FE6F29817091002E8556 /* ProductView.swift in Sources */,
 				696851C32987976F001EB4BC /* Shop_View.swift in Sources */,

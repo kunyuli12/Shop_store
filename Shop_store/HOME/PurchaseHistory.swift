@@ -52,7 +52,7 @@ struct PurchaseHistory: View {
                     
                 }
             }.frame(width: 370, height: 100)
-                .background(Color("yellowlight"))
+                .background(LinearGradient(gradient: Gradient(colors: [Color("healthybuttom"), Color("yellowlight")]), startPoint:.topLeading, endPoint:.bottomTrailing))
                 .cornerRadius(20)
                 .onTapGesture {
                     ShowOrder.toggle()
